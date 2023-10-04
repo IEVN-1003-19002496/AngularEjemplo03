@@ -6,7 +6,7 @@ import { IProductos } from './iproductos';
 })
 export class ProductoFilterPipe implements PipeTransform {
 
-  transform(value:IProductos[], args:String): IProductos[]
+  transform(value:IProductos[], args:String): IProductos[] 
   {
     let filter:string=args ? args.toLocaleLowerCase():'';
     return filter ? value.filter((producto:IProductos)=>
@@ -14,3 +14,4 @@ export class ProductoFilterPipe implements PipeTransform {
   }
 
 }
+

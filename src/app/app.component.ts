@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'AngularEjemplo03';
 
-  duplicaValor(valo:number):number{
-    return valo*2;
-  }
-  pelicula={
-    titulo:'Ted',
-    FechaLanzamiento:new Date(),
+  duplicaValor(valor:number):number
+  {
+    return valor*2;
   }
 
+  pelicula={
+    titulo:"Spider-Man",
+    fecha:new Date(),
+  }
 }

@@ -2,64 +2,49 @@
 <div class="row">
     <div class="col-6">
         <div class="mb-3 row">
-          <label for="num1" class="col-sm-2 col-form-label">Numero 1:</label>
+          <label for="num1"  class="col-sm-2 col-form-label">Numero 1:</label>
           <div class="col-sm-10">
-            <input name="num1" [(ngModel)]="num1" type="text" class="form-control" name="num1" id="num1" placeholder="Numero 1">
+            <input type="text" [(ngModel)]="num1" class="form-control" name="num1" id="num1" placeholder="Numero 1">
+          </div>
+             
+        </div>
+        <div class="mb-3 row">
+            <label for="num2"  class="col-sm-2 col-form-label">Numero 2:</label>
+          <div class="col-sm-10">
+            <input type="text" [(ngModel)]="num2" class="form-control" name="num2" id="num2" placeholder="Numero 2">
           </div>
         </div>
         <div class="mb-3 row">
-            <label for="num2" class="col-sm-2 col-form-label">Numero2</label>
-          <div class="col-sm-10">
-            <input name="num2" [(ngModel)]="num2" type="text" class="form-control" name="num2" id="num2" placeholder="Numero 2">
-          </div>
+            <button (click)="operacion()" class="btn btn-primary">Calcular</button>
         </div>
-        <div>
-            <button (click)="operacion()">
-              Operar
-            </button>
-        </div> 
-        
-
-        <div class="mb-3 row">
-            
-            <div class= "form check">
-                <input class="form-chech-input" type="radio" name="Operar" id="Operar" value="sumar" [(ngModel)]="Operar">
-                <label class="form-check-label">
-                    sumar
-
-                </label>
-                
-            
-        </div>
-        <div class= "form check">
-            <input class="form-chech-input" type="radio" name="Operar" id="Operar" value="resta" [(ngModel)]="Operar">
-            <label class="form-check-label">
-                resta
-
-            </label>
-            
-        
     </div>
-    <div class= "form check">
-        <input class="form-chech-input" type="radio" name="Operar" id="Operar" value="multiplicar" [(ngModel)]="Operar">
-        <label class="form-check-label">
-            multiplicacion
-
-        </label>
-        
-    
-</div>
-<div class= "form check">
-    <input class="form-chech-input" type="radio" name="Operar" id="Operar" value="division" [(ngModel)]="Operar">
-    <label class="form-check-label">
-        division
-
-    </label>
-    
-
-</div>
+    <div class="mb-3 row">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Operar" id="Operar" value="Suma" [(ngModel)]="Operar">
+          <label class="form-check-label">
+            Sumar
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Operar" id="Operar" value="Resta" [(ngModel)]="Operar">
+          <label class="form-check-label">
+            Restar
+          </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Operar" id="Operar" value="Multi" [(ngModel)]="Operar">
+            <label class="form-check-label">
+              Multiplicacion
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="Operar" id="Operar" value="Division" [(ngModel)]="Operar">
+            <label class="form-check-label">
+              Division
+            </label>
+          </div>
     </div>
     <div class="col-6">
-        <h2>Resultado: {{resultado}}</h2>
+        <h2>Resultado: {{resultado}} </h2>
     </div>
 </div>

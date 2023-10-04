@@ -5,38 +5,40 @@ import { Component } from '@angular/core';
   templateUrl: './operas-bas.component.html',
   styleUrls: ['./operas-bas.component.css']
 })
-export class OperasBasComponent 
-{
-  num1:string='';
-  num2:string='';
-  resultado:number=0;
-  Operar:string='';
+export class OperasBasComponent {
+   num1:string='';
+   num2:string='';
+   resultado:number=0;
+   Operar:string='';
 
-  operacion():void{
+   operacion():void
+   {
+       switch(this.Operar)
+       {
+         case 'Suma': 
+         {
+            this.resultado=parseInt(this.num1)+parseInt(this.num2);
+            break;
+         }
 
-    switch(this.Operar){
-      case 'sumar':
-        {
-        this.resultado=parseInt(this.num1)+parseInt(this.num2);
-        break;    
-      }
-       
-    case 'resta': 
-    {
-        this.resultado=parseInt(this.num1)-parseInt(this.num2);
-    break;
-    }
-    case 'multiplicar':
-      {
-        this.resultado=parseInt(this.num1)*parseInt(this.num2);
-    break;
-  }
-    case 'division':{
-        this.resultado=parseInt(this.num1)/parseInt(this.num2);
-    break;
-  }
-    }
-    
-  }
-  
+         case 'Resta': 
+         {
+            this.resultado=parseInt(this.num1)-parseInt(this.num2);
+            break;
+         }
+
+         case 'Multi': 
+         {
+            this.resultado=parseInt(this.num1)*parseInt(this.num2);
+            break;
+         }
+
+         case 'Division': 
+         {
+            this.resultado=parseInt(this.num1)/parseInt(this.num2);
+            break;
+         }
+       }
+   }
+   
 }
